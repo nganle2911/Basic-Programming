@@ -95,10 +95,11 @@ public class ListOfTransaction {
     }
 
     //5. Business methods
-    //Calculate total number of LAND transactions according to types of land (số lượng giao dịch)
-    public int calculateTotalNumOfLandTrans(Scanner scan) {
+    //Calculate total NUMBER and total AMOUNT of LAND transactions according to types of land (số lượng giao dịch)
+    public void calculateTotalNumOfLandTrans(Scanner scan) {
         this.totalNumOfLandTrans = 0; 
-        System.out.println("Which type of land do you want to calculate? Land A, Land B, Land C or all?");
+        this.totalAmountOfLandTrans = 0;  
+        System.out.println("\nWhich type of land do you want to calculate? Land A, Land B, Land C or all?");
         System.out.println("Enter 'A/B/C/all' to calculate");
         System.out.print("Please enter: ");
         String type = scan.nextLine();
@@ -107,27 +108,31 @@ public class ListOfTransaction {
                 if (type.equalsIgnoreCase("a")) {
                     if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("a")) {
                         this.totalNumOfLandTrans++;
+                        this.totalAmountOfLandTrans += transaction.getAmount();
                     }
                 } else if (type.equalsIgnoreCase("b")) {
                     if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("b")) {
                         this.totalNumOfLandTrans++;
+                        this.totalAmountOfLandTrans += transaction.getAmount();
                     }
                 } else if (type.equalsIgnoreCase("c")) {
                     if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("c")) {
                         this.totalNumOfLandTrans++;
+                        this.totalAmountOfLandTrans += transaction.getAmount();
                     }
                 } else {
-                    this.totalNumOfLandTrans++; 
+                    this.totalNumOfLandTrans++;
+                    this.totalAmountOfLandTrans += transaction.getAmount(); 
                 }
             }
-        }
-        return this.totalNumOfLandTrans;  
+        } 
     }
 
-    //Calculate total number of HOUSE transactions according to types of house (số lượng giao dịch)
-    public int calculateTotalNumOfHouseTrans(Scanner scan) {
-        this.totalNumOfHouseTrans = 0; 
-        System.out.println("Which type of house do you want to calculate? Normal, Premium, or all?");
+    //Calculate total NUMBER and total AMOUNT of HOUSE transactions according to types of house (số lượng giao dịch)
+    public void calculateTotalNumOfHouseTrans(Scanner scan) {
+        this.totalNumOfHouseTrans = 0;
+        this.totalAmountOfHouseTrans = 0;  
+        System.out.println("\nWhich type of house do you want to calculate? Normal, Premium, or all?");
         System.err.println("Enter 'normal/premium/all' to calculate");
         System.out.print("Please enter: ");
         String type = scan.nextLine(); 
@@ -136,17 +141,19 @@ public class ListOfTransaction {
                 if (type.equalsIgnoreCase("normal")) {
                     if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase("normal")) {
                         this.totalNumOfHouseTrans++;
+                        this.totalAmountOfHouseTrans += transaction.getAmount();
                     }
                 } else if (type.equalsIgnoreCase("premium")) {
                     if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase("premium")) {
                         this.totalNumOfHouseTrans++;
+                        this.totalAmountOfHouseTrans += transaction.getAmount();
                     }
                 } else {
-                    this.totalNumOfHouseTrans++; 
+                    this.totalNumOfHouseTrans++;
+                    this.totalAmountOfHouseTrans += transaction.getAmount();
                 }
             }
         }
-        return this.totalNumOfHouseTrans;
     }
 
     //Calculate the total number of land transaction 

@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     private static void printMenu() {
+        System.out.println("\n****************** REAL ESTATE MANAGEMENT ******************");
+        System.out.println("\n***************** Please choose the followings actions *****************");
         System.out.println("1. Add transaction");
         System.out.println("2. Output all of transactions");
         System.out.println("3. Calculate the total number of transactions for each type");
@@ -20,7 +22,7 @@ public class Main {
             printMenu();
             System.out.print("Please choose: ");
             int choose = Integer.parseInt(scan.nextLine());
-            System.out.println("\n"); 
+            System.out.print("\n"); 
             
             switch (choose) {
                 case 1:
@@ -34,23 +36,29 @@ public class Main {
                     System.out.println("1. Land Transaction");
                     System.out.println("2. House Transaction");
                     System.out.print("Please choose: ");
-                    int type = Integer.parseInt(scan.nextLine()); 
-                    int totalNum = 0; 
+                    int type = Integer.parseInt(scan.nextLine());  
                     switch (type) {
                         case 1:
-                            totalNum = transaction.calculateTotalNumOfLandTrans(scan);
-                            System.out.println("Total number of land transactions: " + totalNum + " transactions");
+                            transaction.calculateTotalNumOfLandTrans(scan);
+                            transaction.getTotalAmountOfLandTrans();
+                            transaction.getTotalNumOfLandTrans(); 
+                            System.out.println("\nTotal of number of Land transactions: " + transaction.getTotalNumOfLandTrans());
+                            System.out.println("Total of Amount of Land transactions: " + transaction.getTotalAmountOfLandTrans() + " millions VND");
                             break;
                         case 2:
-                            totalNum = transaction.calculateTotalNumOfHouseTrans(scan);
-                            System.out.println("Total number of house transactions: " + totalNum + " transactions");
+                            transaction.calculateTotalNumOfHouseTrans(scan);
+                            transaction.getTotalAmountOfHouseTrans();
+                            transaction.getTotalNumOfHouseTrans();
+                            System.out.println("\nTotal of number of House transactions: " + transaction.getTotalNumOfHouseTrans());
+                            System.out.println("Total of Amount of House transactions: " + transaction.getTotalAmountOfHouseTrans() + " millions VND");
                             break; 
                     }
                     break;
                 case 4: 
                     transaction.calculateAverageMoneyOfLandTrans();
-                    System.out.println("The average money of Land transactions: "
-                            + transaction.calculateAverageMoneyOfLandTrans() + " millions VND");
+                    System.out.printf("The average money of Land transactions: %.2f", transaction.calculateAverageMoneyOfLandTrans());
+                    System.out.print(" millions VND");
+                    System.out.println("\n");
                     break;
                 case 5:
                     transaction.outputTransactionsOnDemand();
