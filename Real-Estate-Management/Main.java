@@ -42,15 +42,15 @@ public class Main {
                             transaction.calculateTotalNumOfLandTrans(scan);
                             transaction.getTotalAmountOfLandTrans();
                             transaction.getTotalNumOfLandTrans(); 
-                            System.out.println("\nTotal of number of Land transactions: " + transaction.getTotalNumOfLandTrans());
-                            System.out.println("Total of Amount of Land transactions: " + transaction.getTotalAmountOfLandTrans() + " millions VND");
+                            System.out.println("\nTotal number of Land transactions: " + transaction.getTotalNumOfLandTrans());
+                            System.out.println("Total Amount of Land transactions: " + transaction.getTotalAmountOfLandTrans() + " millions VND");
                             break;
                         case 2:
                             transaction.calculateTotalNumOfHouseTrans(scan);
                             transaction.getTotalAmountOfHouseTrans();
                             transaction.getTotalNumOfHouseTrans();
-                            System.out.println("\nTotal of number of House transactions: " + transaction.getTotalNumOfHouseTrans());
-                            System.out.println("Total of Amount of House transactions: " + transaction.getTotalAmountOfHouseTrans() + " millions VND");
+                            System.out.println("\nTotal number of House transactions: " + transaction.getTotalNumOfHouseTrans());
+                            System.out.println("Total Amount of House transactions: " + transaction.getTotalAmountOfHouseTrans() + " millions VND");
                             break; 
                     }
                     break;

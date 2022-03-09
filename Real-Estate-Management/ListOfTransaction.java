@@ -60,6 +60,7 @@ public class ListOfTransaction {
         boolean flag = true; 
         Transaction transaction; 
         do {
+            System.out.println("\nWhich transaction do you want to enter?");
             System.out.println("1. Enter Land Transaction");
             System.out.println("2. Enter House Transaction");
             System.out.println("0. Exit");
@@ -99,8 +100,8 @@ public class ListOfTransaction {
     public void calculateTotalNumOfLandTrans(Scanner scan) {
         this.totalNumOfLandTrans = 0; 
         this.totalAmountOfLandTrans = 0;  
-        System.out.println("\nWhich type of land do you want to calculate? Land A, Land B, Land C or all?");
-        System.out.println("Enter 'A/B/C/all' to calculate");
+        System.out.println("\nWhich type of land do you want to calculate? Land A, Land B, Land C or ALL?");
+        System.out.println("Enter 'A/B/C/ALL' to calculate");
         System.out.print("Please enter: ");
         String type = scan.nextLine();
         for (Transaction transaction : this.listTransaction) {
@@ -132,8 +133,8 @@ public class ListOfTransaction {
     public void calculateTotalNumOfHouseTrans(Scanner scan) {
         this.totalNumOfHouseTrans = 0;
         this.totalAmountOfHouseTrans = 0;  
-        System.out.println("\nWhich type of house do you want to calculate? Normal, Premium, or all?");
-        System.err.println("Enter 'normal/premium/all' to calculate");
+        System.out.println("\nWhich type of house do you want to calculate? Normal, Premium, or ALL?");
+        System.err.println("Enter 'NORMAL/PREMIUM/ALL' to calculate");
         System.out.print("Please enter: ");
         String type = scan.nextLine(); 
         for (Transaction transaction : this.listTransaction) {
