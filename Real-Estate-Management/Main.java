@@ -52,6 +52,8 @@ public class Main {
                             System.out.println("\nTotal number of House transactions: " + transaction.getTotalNumOfHouseTrans());
                             System.out.println("Total Amount of House transactions: " + transaction.getTotalAmountOfHouseTrans() + " millions VND");
                             break; 
+                        default:
+                            System.out.println("Please choose only 1 or 2");
                     }
                     break;
                 case 4: 

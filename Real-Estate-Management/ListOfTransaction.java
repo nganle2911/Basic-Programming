@@ -106,7 +106,7 @@ public class ListOfTransaction {
         String type = scan.nextLine();
         for (Transaction transaction : this.listTransaction) {
             if (transaction instanceof LandTransaction) {
-                if (type.equalsIgnoreCase("a")) {
+                /* if (type.equalsIgnoreCase("a")) {
                     if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("a")) {
                         this.totalNumOfLandTrans++;
                         this.totalAmountOfLandTrans += transaction.getAmount();
@@ -120,8 +120,12 @@ public class ListOfTransaction {
                     if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("c")) {
                         this.totalNumOfLandTrans++;
                         this.totalAmountOfLandTrans += transaction.getAmount();
-                    }
-                } else {
+                    } */
+                if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase(type)) {
+                    this.totalNumOfLandTrans++;
+                    this.totalAmountOfLandTrans += transaction.getAmount();               
+                }
+                if (type.equalsIgnoreCase("all")) {
                     this.totalNumOfLandTrans++;
                     this.totalAmountOfLandTrans += transaction.getAmount(); 
                 }
@@ -139,17 +143,11 @@ public class ListOfTransaction {
         String type = scan.nextLine(); 
         for (Transaction transaction : this.listTransaction) {
             if (transaction instanceof HouseTransaction) {
-                if (type.equalsIgnoreCase("normal")) {
-                    if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase("normal")) {
-                        this.totalNumOfHouseTrans++;
-                        this.totalAmountOfHouseTrans += transaction.getAmount();
-                    }
-                } else if (type.equalsIgnoreCase("premium")) {
-                    if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase("premium")) {
-                        this.totalNumOfHouseTrans++;
-                        this.totalAmountOfHouseTrans += transaction.getAmount();
-                    }
-                } else {
+                if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase(type)) {
+                    this.totalNumOfHouseTrans++;
+                    this.totalAmountOfHouseTrans += transaction.getAmount(); 
+                }
+                if (type.equalsIgnoreCase("all")) {
                     this.totalNumOfHouseTrans++;
                     this.totalAmountOfHouseTrans += transaction.getAmount();
                 }
