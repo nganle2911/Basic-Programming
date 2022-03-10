@@ -106,11 +106,7 @@ public class ListOfTransaction {
         String type = scan.nextLine();
         for (Transaction transaction : this.listTransaction) {
             if (transaction instanceof LandTransaction) {
-                if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase(type)) {
-                    this.totalNumOfLandTrans++;
-                    this.totalAmountOfLandTrans += transaction.getAmount();               
-                }
-                if (type.equalsIgnoreCase("all")) {
+                if (type.equalsIgnoreCase("all") || ((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase(type)) {
                     this.totalNumOfLandTrans++;
                     this.totalAmountOfLandTrans += transaction.getAmount(); 
                 }
@@ -128,13 +124,9 @@ public class ListOfTransaction {
         String type = scan.nextLine(); 
         for (Transaction transaction : this.listTransaction) {
             if (transaction instanceof HouseTransaction) {
-                if (((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase(type)) {
+                if (type.equalsIgnoreCase("all") || ((HouseTransaction)transaction).getTypeOfHouse().equalsIgnoreCase(type)) {
                     this.totalNumOfHouseTrans++;
                     this.totalAmountOfHouseTrans += transaction.getAmount(); 
-                }
-                if (type.equalsIgnoreCase("all")) {
-                    this.totalNumOfHouseTrans++;
-                    this.totalAmountOfHouseTrans += transaction.getAmount();
                 }
             }
         }
