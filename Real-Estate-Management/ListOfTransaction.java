@@ -106,21 +106,6 @@ public class ListOfTransaction {
         String type = scan.nextLine();
         for (Transaction transaction : this.listTransaction) {
             if (transaction instanceof LandTransaction) {
-                /* if (type.equalsIgnoreCase("a")) {
-                    if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("a")) {
-                        this.totalNumOfLandTrans++;
-                        this.totalAmountOfLandTrans += transaction.getAmount();
-                    }
-                } else if (type.equalsIgnoreCase("b")) {
-                    if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("b")) {
-                        this.totalNumOfLandTrans++;
-                        this.totalAmountOfLandTrans += transaction.getAmount();
-                    }
-                } else if (type.equalsIgnoreCase("c")) {
-                    if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase("c")) {
-                        this.totalNumOfLandTrans++;
-                        this.totalAmountOfLandTrans += transaction.getAmount();
-                    } */
                 if (((LandTransaction)transaction).getTypeOfLand().equalsIgnoreCase(type)) {
                     this.totalNumOfLandTrans++;
                     this.totalAmountOfLandTrans += transaction.getAmount();               
