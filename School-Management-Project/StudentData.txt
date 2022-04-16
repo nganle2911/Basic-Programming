@@ -1,0 +1,12 @@
+Linh An     # 2007 # Ho Chi Minh # 2/35b Cao Thang    # 8.5  # 7.9  # 9.5
+Khanh Ngan  # 2007 # Ho Chi Minh # 12 To Hien Thanh   # 9    # 8    # 10
+Huu Dat     # 2006 # Binh Thuan  # 56 Cao Thang       # 10   # 8    # 7.5
+Thanh Thuan # 2007 # Ho Chi Minh # 239 Cao Thang      # 6.5  # 5.9  # 7.5
+Van Chuan   # 2007 # Binh Phuoc  # 96/5a Hai Ba Trung # 4.3  # 2.9  # 3.2
+Trung Dung  # 2006 # Ho Chi Minh # 78/5a Vo Van Kiet  # 5.6  # 7.8  # 9.5
+Anh Dung    # 2007 # Ho Chi Minh # 652 To Hien Thanh  # 8.6  # 9.3  # 10
+Hoang Ha    # 2007 # Ha Noi      # 78/10B Cao Thang   # 5.5  # 6.5  # 7.5
+Anh Duy     # 2007 # Ho Chi Minh # 65 Hai Ba Trung    # 3.57 # 5.43 # 5.65
+Yen Linh    # 2007 # Ho Chi Minh # 69 Vo Van Tan      # 6.9  # 7.85 # 4.56
+Ngoc Mai    # 2007 # Ho Chi Minh # 98 Hai Ba Trung    # 10   # 9.3  # 9.8
+Giao Minh   # 2006 # Binh Phuoc  # 45 To Hien Thanh   # 9.8  # 10   # 9.3 
